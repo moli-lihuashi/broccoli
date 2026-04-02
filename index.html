@@ -1,0 +1,1672 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lando Norris 官方粉丝页面 - 2025赛季迈凯伦F1车手。了解他的职业生涯、比赛成绩、生活方式和最新动态。">
+  <meta name="keywords" content="Lando Norris, McLaren, F1, Formula 1, 一级方程式, 迈凯伦, LN4, 赛车">
+  <meta name="author" content="Lando Norris Fan Page">
+  <meta name="theme-color" content="#00FF87">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow, max-image-preview:large">
+  <title>Lando Norris — 2025 迈凯伦F1车手</title>
+  
+  <!-- Open Graph / 社交媒体 -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://landonorris.com/">
+  <meta property="og:title" content="Lando Norris — 2025 迈凯伦F1车手">
+  <meta property="og:description" content="Lando Norris 官方粉丝页面 - 2025赛季迈凯伦F1车手。了解他的职业生涯、比赛成绩、生活方式和最新动态。">
+  <meta property="og:image" content="./Photoshot/og-image.jpg">
+  <meta property="og:locale" content="zh_CN">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lando Norris — 2025 迈凯伦F1车手">
+  <meta name="twitter:description" content="Lando Norris 官方粉丝页面 - 2025赛季迈凯伦F1车手">
+  <meta name="twitter:image" content="./Photoshot/og-image.jpg">
+  
+  <!-- 资源预加载 -->
+  <link rel="preload" href="complete_merged.css" as="style">
+  <link rel="preload" href="complete_merged.js" as="script">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  
+  <!-- 关键图片预加载 -->
+  <link rel="preload" href="./Photoshot/helmet.png" as="image">
+  
+  <!-- 样式表 -->
+  <link rel="stylesheet" href="complete_merged.css" />
+  
+  <!-- 字体加载优化 -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- 结构化数据 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Athlete",
+    "name": "Lando Norris",
+    "alternateName": "LN4",
+    "sport": "Formula 1",
+    "nationality": "British",
+    "birthDate": "1999-11-13",
+    "birthPlace": "Bristol, England",
+    "team": {
+      "@type": "SportsTeam",
+      "name": "McLaren F1 Team",
+      "sport": "Formula 1"
+    },
+    "careerStatistics": {
+      "@type": "QuantitativeValue",
+      "name": "F1 Career Statistics",
+      "value": "4 wins, 21 podiums, 6 pole positions"
+    },
+    "image": "./Photoshot/og-image.jpg",
+    "url": "https://landonorris.com"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Lando Norris Fan Page",
+    "url": "https://landonorris.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://landonorris.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  
+  <style>
+    /* ========================================
+       头盔揭示动画层
+       用于鼠标悬停时显示头盔的圆形揭示效果
+       ======================================== */
+    .helmet-reveal {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      clip-path: circle(0px at 50% 50%);
+      transition: clip-path 0.15s ease-out;
+      pointer-events: none;
+      background: #0a0a0a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .helmet-reveal-img {
+      width: 60%;
+      max-width: 500px;
+      height: auto;
+      object-fit: contain;
+      opacity: 0.95;
+      filter: drop-shadow(0 0 40px rgba(0, 255, 135, 0.3));
+    }
+
+    /* ========================================
+       Hero 区域定位上下文
+       确保子元素正确定位
+       ======================================== */
+    .section-hero {
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Hero 内容层级管理 */
+    .hero-content {
+      position: relative;
+      z-index: 5;
+    }
+
+    .hero-number {
+      z-index: 3;
+    }
+
+    .hero-badge {
+      z-index: 15;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ========================================
+       背景装饰元素
+       极光效果的模糊背景球体
+       ======================================== -->
+  <div class="bg-aurora-blob blob-1" aria-hidden="true"></div>
+  <div class="bg-aurora-blob blob-2" aria-hidden="true"></div>
+
+  <!-- 自定义光标 -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- ========================================
+       页面加载动画
+       显示加载进度和品牌标识
+       ======================================== -->
+  <div class="loader" id="loader" role="progressbar" aria-label="页面加载中" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+    <div class="loader-inner">
+      <div class="loader-line"></div>
+      <span class="loader-text">LOAD NORRIS</span>
+      <div class="loader-progress">
+        <div class="loader-progress-bar" id="loaderBar"></div>
+      </div>
+      <span class="loader-percent" id="loaderPercent">0%</span>
+    </div>
+  </div>
+
+  <!-- ========================================
+       主导航栏
+       包含Logo、导航链接、主题切换和移动端菜单按钮
+       ======================================== -->
+  <nav class="nav" id="nav" role="navigation" aria-label="主导航">
+    <div class="nav-logo">
+      <svg class="nav-logo-svg" viewBox="0 0 60 24" fill="none" role="img" aria-label="LN4 Logo">
+        <text x="0" y="18" font-family="Space Grotesk" font-weight="700" font-size="18" fill="currentColor">LN4</text>
+      </svg>
+    </div>
+    <div class="nav-links">
+      <a href="#home" class="nav-link">首页</a>
+      <a href="#on-track" class="nav-link">赛道上</a>
+      <a href="#off-track" class="nav-link">赛道外</a>
+      <a href="#partnerships" class="nav-link">合作伙伴</a>
+      <a href="#calendar" class="nav-link">日历</a>
+      <a href="#games" class="nav-link">游戏</a>
+      <a href="#fan-messages" class="nav-link">粉丝留言</a>
+    </div>
+    <button class="theme-toggle" id="themeToggle" aria-label="切换明暗主题" title="切换主题">
+      <svg class="icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      <svg class="icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button class="nav-menu-btn" id="menuBtn" aria-label="打开菜单" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav-ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>自2019年加入迈凯伦F1车队 &nbsp;&bull;&nbsp; 自2019年加入迈凯伦F1车队 &nbsp;&bull;&nbsp; 自2019年加入迈凯伦F1车队 &nbsp;&bull;&nbsp;</span>
+        <span>自2019年加入迈凯伦F1车队 &nbsp;&bull;&nbsp; 自2019年加入迈凯伦F1车队 &nbsp;&bull;&nbsp; 自2019年加入迈凯伦F1车队 &nbsp;&bull;&nbsp;</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 移动端导航菜单 -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="移动端导航菜单" aria-hidden="true">
+    <a href="#home" class="mobile-menu-link">首页</a>
+    <a href="#on-track" class="mobile-menu-link">赛道上</a>
+    <a href="#off-track" class="mobile-menu-link">赛道外</a>
+    <a href="#partnerships" class="mobile-menu-link">合作伙伴</a>
+    <a href="#calendar" class="mobile-menu-link">日历</a>
+    <a href="#games" class="mobile-menu-link">游戏</a>
+    <a href="#fan-messages" class="mobile-menu-link">粉丝留言</a>
+    <div class="mobile-menu-socials">
+      <a href="#" aria-label="TikTok">TikTok</a>
+      <a href="#" aria-label="Instagram">Instagram</a>
+      <a href="#" aria-label="YouTube">YouTube</a>
+      <a href="#" aria-label="Twitch">Twitch</a>
+    </div>
+  </div>
+
+  <!-- 页面滚动进度条 -->
+  <div class="scroll-progress" role="progressbar" aria-label="页面滚动进度">
+    <div class="scroll-progress-bar" id="scrollProgress"></div>
+  </div>
+
+  <!-- 当前版块指示器 -->
+  <div class="section-indicator" id="sectionIndicator" aria-live="polite" aria-label="当前版块">
+    <span class="section-indicator-current">01</span>
+    <span class="section-indicator-divider">/</span>
+    <span class="section-indicator-total">22</span>
+  </div>
+
+  <main class="main" id="main">
+
+    <!-- ========================================
+         版块 1: Hero 首页
+         主视觉区域，包含标题、倒计时和粒子效果
+         ======================================== -->
+    <section class="section section-hero" data-section="1" id="home">
+      <div class="hero-bg-lines" aria-hidden="true">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+        <div class="line line-4"></div>
+        <div class="line line-5"></div>
+      </div>
+
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="hero-title-line" data-delay="0"><span>LANDO</span></span>
+          <span class="hero-title-line" data-delay="1"><span>NORRIS</span></span>
+        </h1>
+        <p class="hero-subtitle">2025 McLaren Formula 1 Driver</p>
+        <div class="hero-scroll-hint">
+          <div class="scroll-line"></div>
+          <span>滚动探索</span>
+        </div>
+      </div>
+
+      <!-- 头盔揭示效果层 -->
+      <div class="helmet-reveal" id="helmetReveal" aria-hidden="true">
+        <img src="./Photoshot/helmet.png" alt="Lando Norris 头盔" class="helmet-reveal-img">
+      </div>
+
+      <!-- 粒子动画画布 -->
+      <canvas id="hero-particles" aria-hidden="true"></canvas>
+
+      <div class="hero-number" aria-hidden="true">04</div>
+      
+      <!-- 下一场比赛倒计时 -->
+      <div class="hero-badge" id="raceCountdown" aria-live="polite">
+        <span>下一场：澳大利亚大奖赛</span>
+        <div class="countdown-timer" role="timer" aria-label="距离比赛还有">
+          <div class="cd-item"><strong id="cd-days">00</strong><span>天</span></div>
+          <div class="cd-item"><strong id="cd-hours">00</strong><span>时</span></div>
+          <div class="cd-item"><strong id="cd-mins">00</strong><span>分</span></div>
+          <div class="cd-item"><strong id="cd-secs">00</strong><span>秒</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         版块 2: 签名展示
+         展示兰多的签名和加入迈凯伦的时间
+         ======================================== -->
+    <section class="section section-signature" data-section="2" aria-label="签名展示">
+      <div class="signature-content">
+        <svg class="signature-svg" viewBox="0 0 400 120" fill="none" stroke="var(--lime)" stroke-width="2" role="img" aria-label="Lando Norris 签名">
+          <path class="signature-path" d="M20,80 C40,20 60,20 80,60 S120,100 140,60 S180,20 200,60 S240,100 260,60 S300,20 320,60 S360,100 380,60" />
+        </svg>
+        <p class="signature-text">McLaren F1 Since 2019</p>
+      </div>
+    </section>
+
+    <!-- ========================================
+         版块 3: 个人宣言
+         展示兰多的座右铭和人生哲学
+         ======================================== -->
+    <section class="section section-message" data-section="3" aria-labelledby="message-title">
+      <div class="message-label" id="message-title">来自兰多的信息</div>
+      <div class="message-content reveal-up">
+        <p class="message-text">
+          <span class="word-reveal"><strong>重新定义</strong></span>
+          <span class="word-reveal">界限，</span>
+          <span class="word-reveal">为</span>
+          <span class="word-reveal">胜利</span>
+          <span class="word-reveal">而战，</span>
+          <span class="word-reveal">全力以赴，</span>
+          <span class="word-reveal">竭尽所能。</span>
+          <span class="word-reveal">在</span>
+          <span class="word-reveal">一级方程式</span>
+          <span class="word-reveal">的赛道内外</span>
+          <span class="word-reveal">缔造属于</span>
+          <span class="word-reveal">自己的</span>
+          <span class="word-reveal"><strong>传奇</strong></span>。
+        </p>
+      </div>
+      <div class="message-ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span>自2019年加入迈凯伦F1车队 &nbsp;&bull;&nbsp; 自2019年加入迈凯伦F1车队 &nbsp;&bull;&nbsp; 自2019年加入迈凯伦F1车队 &nbsp;&bull;&nbsp;</span>
+          <span>自2019年加入迈凯伦F1车队 &nbsp;&bull;&nbsp; 自2019年加入迈凯伦F1车队 &nbsp;&bull;&nbsp; 自2019年加入迈凯伦F1车队 &nbsp;&bull;&nbsp;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         版块 4: 职业统计数据
+         展示比赛胜场、领奖台、杆位等数据
+         ======================================== -->
+    <section class="section section-stats" data-section="4" aria-label="职业统计">
+      <div class="stats-container reveal-up">
+        <div class="stat-item">
+          <span class="stat-number" data-target="4">0</span>
+          <span class="stat-label">Race Wins</span>
+          <div class="stat-line"></div>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="21">0</span>
+          <span class="stat-label">Podiums</span>
+          <div class="stat-line"></div>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="6">0</span>
+          <span class="stat-label">Pole Positions</span>
+          <div class="stat-line"></div>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="120">0</span>
+          <span class="stat-label">Race Starts</span>
+          <div class="stat-line"></div>
+        </div>
+      </div>
+      <div class="stats-bg-text" aria-hidden="true">LN4</div>
+    </section>
+
+    <!-- ========================================
+         版块 5: 视觉故事（瀑布流画廊）
+         展示比赛和生活中的精彩照片
+         ======================================== -->
+    <section class="section section-masonry" data-section="5" aria-label="视觉故事"> 
+      <div class="masonry-wrapper reveal-up"> 
+        <div class="masonry-header"> 
+          <h2 class="masonry-title"> 
+            <span class="title-reveal">视觉</span> 
+            <span class="title-reveal" style="color: var(--lime);">故事</span> 
+          </h2> 
+          <p class="masonry-desc reveal-up stagger-1">捕捉每一次极限超车与颁奖台上的高光时刻。</p> 
+        </div> 
+
+        <div class="masonry-grid"> 
+          <div class="masonry-item tilt-card reveal-up stagger-1"> 
+            <div class="photo-placeholder"> 
+              <img src="./Photoshot/1.png" alt="2024年卡塔尔大奖赛" loading="lazy" decoding="async"> 
+              <div class="masonry-overlay"> 
+                <span class="masonry-location">Qatar</span> 
+                <span class="masonry-year">2024</span> 
+              </div> 
+            </div> 
+          </div> 
+
+          <div class="masonry-item tilt-card reveal-up stagger-2"> 
+            <div class="photo-placeholder"> 
+              <img src="./Photoshot/2.jpg" alt="2024年迈阿密大奖赛" loading="lazy" decoding="async"> 
+              <div class="masonry-overlay"> 
+                <span class="masonry-location">Miami GP</span> 
+                <span class="masonry-year">2024</span> 
+              </div> 
+            </div> 
+          </div> 
+
+          <div class="masonry-item tilt-card reveal-up stagger-3"> 
+            <div class="photo-placeholder"> 
+              <img src="./Photoshot/5.jpg" alt="2024年FIA颁奖典礼" loading="lazy" decoding="async"> 
+              <div class="masonry-overlay"> 
+                <span class="masonry-location">FIA Prize Giving</span> 
+                <span class="masonry-year">2024</span> 
+              </div> 
+            </div> 
+          </div> 
+
+          <div class="masonry-item tilt-card reveal-up stagger-4"> 
+            <div class="photo-placeholder"> 
+              <img src="./Photoshot/3.jpeg" alt="2023年摩纳哥大奖赛" loading="lazy" decoding="async"> 
+              <div class="masonry-overlay"> 
+                <span class="masonry-location">Monaco</span> 
+                <span class="masonry-year">2023</span> 
+              </div> 
+            </div> 
+          </div> 
+
+          <div class="masonry-item tilt-card reveal-up stagger-1"> 
+            <div class="photo-placeholder"> 
+              <img src="./Photoshot/4.jpeg" alt="2025年英国银石赛道" loading="lazy" decoding="async"> 
+              <div class="masonry-overlay"> 
+                <span class="masonry-location">Silverstone</span> 
+                <span class="masonry-year">2025</span> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+    </section>
+
+    <!-- ========================================
+         版块 6: 横向滚动画廊
+         展示更多比赛照片
+         ======================================== -->
+    <section class="section section-gallery" data-section="6" aria-label="照片画廊">
+      <div class="gallery-header">
+        <h2 class="gallery-title">
+          <span class="title-reveal">Gallery</span>
+        </h2>
+        <div class="gallery-line"></div>
+      </div>
+      <div class="gallery-track" id="galleryTrack" role="region" aria-label="照片画廊，可横向滚动">
+        <div class="gallery-slide">
+          <div class="gallery-image">
+            <div class="photo-placeholder"><div style="display: flex; align-items: center; justify-content: center; padding: 20px; min-height: 200px;"><img src="./Photoshot/6.jpeg" alt="2024年Battersea活动" style="max-width: 100%; max-height: 200px; object-fit: contain;" loading="lazy" decoding="async"></div><p>Battersea, 2024</p></div>
+          </div>
+          <span class="gallery-caption">Battersea, 2024</span>
+        </div>
+        <div class="gallery-slide">
+          <div class="gallery-image">
+            <div class="photo-placeholder"><div style="display: flex; align-items: center; justify-content: center; padding: 20px; min-height: 200px;"><img src="./Photoshot/7.jpeg" alt="高性能晚宴" style="max-width: 100%; max-height: 200px; object-fit: contain;" loading="lazy" decoding="async"></div><p>High Performance Gala</p></div>
+          </div>
+          <span class="gallery-caption">High Performance Gala, 2024</span>
+        </div>
+        <div class="gallery-slide">
+          <div class="gallery-image">
+            <div class="photo-placeholder"><div style="display: flex; align-items: center; justify-content: center; padding: 20px; min-height: 200px;"><img src="./Photoshot/8.jpeg" alt="2024年巴塞罗那测试" style="max-width: 100%; max-height: 200px; object-fit: contain;" loading="lazy" decoding="async"></div><p>Barcelona, 2024</p></div>
+          </div>
+          <span class="gallery-caption">Barcelona, 2024</span>
+        </div>
+        <div class="gallery-slide">
+          <div class="gallery-image">
+            <div class="photo-placeholder"><div style="display: flex; align-items: center; justify-content: center; padding: 20px; min-height: 200px;"><img src="./Photoshot/9.jpeg" alt="2020年奥地利大奖赛" style="max-width: 100%; max-height: 200px; object-fit: contain;" loading="lazy" decoding="async"></div><p>Austria, 2020</p></div>
+          </div>
+          <span class="gallery-caption">Austria, 2020</span>
+        </div>
+        <div class="gallery-slide">
+          <div class="gallery-image">
+            <div class="photo-placeholder"><div style="display: flex; align-items: center; justify-content: center; padding: 20px; min-height: 200px;"><img src="./Photoshot/10.jpeg" alt="2024年美国大奖赛" style="max-width: 100%; max-height: 200px; object-fit: contain;" loading="lazy" decoding="async"></div><p>US, 2024</p></div>
+          </div>
+          <span class="gallery-caption">US, 2024</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         版块 7: F1发展史时间线
+         展示F1历史重要里程碑
+         ======================================== -->
+    <section class="section section-timeline" data-section="7" id="history" aria-label="F1发展史"> 
+      <div class="timeline-sticky"> 
+        <div class="timeline-title-wrap reveal-up"> 
+          <h2 class="timeline-title"> 
+            <span class="title-reveal">F1</span> 
+            <span class="title-reveal" style="color: var(--lime);">发展史</span> 
+          </h2> 
+        </div> 
+        
+        <div class="timeline-viewport"> 
+          <div class="timeline-track" id="timelineTrack" role="list" aria-label="F1历史时间线"> 
+            <div class="timeline-line" aria-hidden="true"></div> 
+            <div class="timeline-line-active" id="timelineActiveLine" aria-hidden="true"></div> 
+            
+            <div class="track-kerb" id="trackKerb" aria-hidden="true"></div>
+
+            <div class="timeline-item top" style="left: 10%;" role="listitem"> 
+              <div class="timeline-year">1950</div> 
+              <div class="timeline-desc">F1世界锦标赛正式成立，开启赛车运动的最高殿堂。</div> 
+            </div> 
+            <div class="timeline-item bottom" style="left: 30%;" role="listitem"> 
+              <div class="timeline-year">1968</div> 
+              <div class="timeline-desc">空气动力学尾翼首次引入，彻底改变了赛车的设计思路。</div> 
+            </div> 
+            <div class="timeline-item top" style="left: 50%;" role="listitem"> 
+              <div class="timeline-year">1977</div> 
+              <div class="timeline-desc">"地面效应"时代开启，赛车弯道速度实现质的飞跃。</div> 
+            </div> 
+            <div class="timeline-item bottom" style="left: 70%;" role="listitem"> 
+              <div class="timeline-year">2014</div> 
+              <div class="timeline-desc">V6涡轮增压混合动力时代到来，追求极致性能与环保。</div> 
+            </div> 
+            <div class="timeline-item top" style="left: 90%;" role="listitem"> 
+              <div class="timeline-year">2026</div> 
+              <div class="timeline-desc">全新引擎与100%可持续燃料规则即将全面实施。</div> 
+            </div> 
+          </div> 
+
+          <!-- F1赛车动画元素 -->
+          <div class="timeline-car-wrapper" id="timelineCar" aria-hidden="true"> 
+            <div class="f1-stage"> 
+              <div class="f1-container"> 
+                <div class="speed-lines" id="speedLines"> 
+                  <div class="s-line s-line-1"></div> 
+                  <div class="s-line s-line-2"></div> 
+                  <div class="s-line s-line-3"></div> 
+                </div> 
+
+                <img src="./Photoshot/24.png" alt="F1赛车车身" class="f1-body"> 
+                
+                <div class="f1-tail-light" id="f1TailLight"></div>
+
+                <img src="./Photoshot/25.png" alt="F1前轮胎" class="f1-tire front-tire"> 
+                <img src="./Photoshot/25.png" alt="F1后轮胎" class="f1-tire rear-tire"> 
+              </div> 
+              <div class="f1-shadow"></div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+    </section>
+
+    <!-- ========================================
+         版块 8: 梦想宣言
+         展示兰多追逐梦想的故事
+         ======================================== -->
+    <section class="section section-dream" data-section="8" aria-label="梦想故事">
+      <div class="dream-content reveal-up">
+        <div class="dream-lines" aria-hidden="true">
+          <div class="dream-line-bg"></div>
+          <div class="dream-line-bg"></div>
+          <div class="dream-line-bg"></div>
+        </div>
+        <p class="dream-text">
+          从我<strong>7岁</strong>第一次接触卡丁车比赛开始，我就一直在不懈努力，让那个<em>梦想</em>成为现实。
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================================
+         版块 9: 赛道之上
+         展示比赛相关内容和成绩
+         ======================================== -->
+    <section class="section section-ontrack" data-section="9" id="on-track" aria-labelledby="ontrack-title">
+      <div class="split-content">
+        <div class="split-left reveal-left">
+          <div class="split-image">
+            <div class="photo-placeholder"><img src="./Photoshot/11.jpg" alt="赛道上的Lando Norris" style="width: 100%; height: auto;" loading="lazy" decoding="async"><p>赛道上</p></div>
+          </div>
+        </div>
+        <div class="split-right reveal-right">
+          <h2 class="split-title" id="ontrack-title">
+            <span class="title-line">赛道</span>
+            <span class="title-line">之上</span>
+          </h2>
+          <p class="split-desc">最新<strong>比赛成绩</strong>、职业生涯数据和赛道照片。</p>
+          <a href="#" class="split-cta magnetic-btn" aria-label="探索赛道内容">
+            <span>探索</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         版块 10: 2024赛季成绩
+         展示赛季亮点比赛成绩
+         ======================================== -->
+    <section class="section section-results" data-section="10" aria-label="2024赛季成绩">
+      <div class="results-container">
+        <h3 class="results-header">2024 Season Highlights</h3>
+        <div class="results-list" role="list">
+          <div class="result-item reveal-up stagger-1" role="listitem">
+            <span class="result-pos">P1</span>
+            <span class="result-race">Miami Grand Prix</span>
+            <span class="result-date">May 2024</span>
+            <div class="result-line"></div>
+          </div>
+          <div class="result-item reveal-up stagger-2" role="listitem">
+            <span class="result-pos">P1</span>
+            <span class="result-race">Dutch Grand Prix</span>
+            <span class="result-date">Aug 2024</span>
+            <div class="result-line"></div>
+          </div>
+          <div class="result-item reveal-up stagger-3" role="listitem">
+            <span class="result-pos">P1</span>
+            <span class="result-race">Singapore Grand Prix</span>
+            <span class="result-date">Sep 2024</span>
+            <div class="result-line"></div>
+          </div>
+          <div class="result-item reveal-up stagger-4" role="listitem">
+            <span class="result-pos">P1</span>
+            <span class="result-race">Abu Dhabi Grand Prix</span>
+            <span class="result-date">Dec 2024</span>
+            <div class="result-line"></div>
+          </div>
+          <div class="result-item" role="listitem">
+            <span class="result-pos">P2</span>
+            <span class="result-race">Drivers' Championship</span>
+            <span class="result-date">2024</span>
+            <div class="result-line"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         版块 11: 车手对比
+         与其他车手的数据对比
+         ======================================== -->
+    <section class="section section-comparison" data-section="11" id="comparison" aria-label="车手数据对比"> 
+      <div class="comparison-container"> 
+        <h2 class="comparison-title"> 
+          <span class="title-reveal">职业生涯</span> 
+          <span class="title-reveal" style="color: var(--lime);">对比</span> 
+        </h2> 
+        
+        <div class="driver-selector" role="tablist" aria-label="选择对比车手"> 
+          <button class="driver-btn active" data-driver="verstappen" role="tab" aria-selected="true">Max Verstappen</button> 
+          <button class="driver-btn" data-driver="leclerc" role="tab" aria-selected="false">Charles Leclerc</button> 
+          <button class="driver-btn" data-driver="piastri" role="tab" aria-selected="false">Oscar Piastri</button> 
+        </div> 
+ 
+        <div class="comparison-grid" role="tabpanel"> 
+          <div class="comparison-stat"> 
+            <div class="stat-bar-wrapper"> 
+              <div class="stat-bar norris-bar" style="width: 0%"></div> 
+              <div class="stat-bar compare-bar" style="width: 0%"></div> 
+            </div> 
+            <div class="stat-labels"> 
+              <span class="stat-name">分站冠军</span> 
+              <div class="stat-values"> 
+                <span class="norris-value">4</span> 
+                <span class="compare-value">0</span> 
+              </div> 
+            </div> 
+          </div> 
+          
+          <div class="comparison-stat"> 
+            <div class="stat-bar-wrapper"> 
+              <div class="stat-bar norris-bar" style="width: 0%"></div> 
+              <div class="stat-bar compare-bar" style="width: 0%"></div> 
+            </div> 
+            <div class="stat-labels"> 
+              <span class="stat-name">领奖台</span> 
+              <div class="stat-values"> 
+                <span class="norris-value">21</span> 
+                <span class="compare-value">0</span> 
+              </div> 
+            </div> 
+          </div> 
+ 
+          <div class="comparison-stat"> 
+            <div class="stat-bar-wrapper"> 
+              <div class="stat-bar norris-bar" style="width: 0%"></div> 
+              <div class="stat-bar compare-bar" style="width: 0%"></div> 
+            </div> 
+            <div class="stat-labels"> 
+              <span class="stat-name">杆位</span> 
+              <div class="stat-values"> 
+                <span class="norris-value">6</span> 
+                <span class="compare-value">0</span> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+    </section>
+
+    <!-- ========================================
+         版块 12: MCL38赛车技术规格
+         展示迈凯伦赛车技术参数
+         ======================================== -->
+    <section class="section section-car" data-section="12" aria-label="MCL38赛车技术规格">
+      <div class="car-interactive-wrapper reveal-up">
+        <h2 class="car-interactive-title">
+          <span class="title-reveal">MCL38</span>
+          <span class="title-reveal" style="color: var(--lime); font-size: 0.4em; letter-spacing: 4px;">TECH SPEC</span>
+        </h2>
+
+        <div class="car-dashboard-main">
+          <div class="spec-column left reveal-left">
+            <div class="spec-bar-item">
+              <div class="spec-info"><span>MAX SPEED</span><strong>341 KM/H</strong></div>
+              <div class="progress-bg"><div class="progress-fill" style="width: 95%"></div></div>
+            </div>
+            <div class="spec-bar-item">
+              <div class="spec-info"><span>0-100 KM/H</span><strong>2.6 SEC</strong></div>
+              <div class="progress-bg"><div class="progress-fill" style="width: 98%"></div></div>
+            </div>
+          </div>
+
+          <div class="car-hotspot-container">
+            <img src="./Photoshot/mcl38.jpg" alt="MCL38赛车" class="car-main-img">
+            <div class="hotspot" style="top: 45%; left: 70%;" aria-label="技术热点"><div class="hotspot-dot"></div><div class="hotspot-pulse"></div></div>
+            <div class="hotspot" style="top: 38%; left: 45%;" aria-label="技术热点"><div class="hotspot-dot"></div><div class="hotspot-pulse"></div></div>
+          </div>
+
+          <div class="spec-column right reveal-right">
+            <div class="spec-bar-item">
+              <div class="spec-info"><span>DOWNFORCE</span><strong>ULTRA HIGH</strong></div>
+              <div class="progress-bg"><div class="progress-fill" style="width: 92%"></div></div>
+            </div>
+            <div class="spec-bar-item">
+              <div class="spec-info"><span>CHASSIS</span><strong>CARBON</strong></div>
+              <div class="progress-bg"><div class="progress-fill" style="width: 85%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         版块 13: 赛道之外
+         展示Lando的生活方式和兴趣爱好
+         ======================================== -->
+    <section class="section section-offtrack" data-section="13" id="off-track" aria-labelledby="offtrack-title">
+      <div class="lifestyle-mosaic-wrap">
+        <div class="mosaic-bg-text" aria-hidden="true">OFF TRACK</div>
+        
+        <div class="mosaic-grid">
+          <div class="mosaic-item main-img reveal-left">
+            <div class="img-inner-wrap">
+              <img src="./Photoshot/12.jpeg" alt="Lando生活照">
+              <div class="mosaic-overlay">
+                <span class="location-tag">BEYOND THE GRID</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mosaic-item side-content reveal-right">
+            <h2 class="split-title" id="offtrack-title">赛道<br><span style="color:var(--lime)">之外</span></h2>
+            <p class="split-desc">从卡丁车场到高尔夫球场，兰多的生活不仅仅是 300km/h 的驰骋。他用多样的身份重新定义现代赛车手的边界。</p>
+            <div class="lifestyle-tags">
+              <span class="tag-item">#QUADRANT</span>
+              <span class="tag-item">#GOLF</span>
+              <span class="tag-item">#GAMING</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         版块 14: 社交动态
+         展示社交媒体内容
+         ======================================== -->
+    <section class="section section-social" data-section="14" id="social" aria-label="社交媒体动态">
+      <div class="social-feed-container">
+        <h2 class="social-title">
+          <span class="title-reveal">社交</span>
+          <span class="title-reveal" style="color: var(--lime);">动态</span>
+        </h2>
+        
+        <div class="social-grid">
+          <article class="social-card reveal-up stagger-1">
+            <div class="social-platform">Instagram</div>
+            <div class="social-content">
+              <img src="./Photoshot/31.jpg" alt="Instagram帖子：赛季准备中" loading="lazy" decoding="async">
+              <p class="social-caption">赛季准备中 💪 #F1 #McLaren</p>
+            </div>
+            <div class="social-meta">
+              <span>❤️ 245K</span>
+              <span>💬 1.2K</span>
+            </div>
+          </article>
+          
+          <article class="social-card reveal-up stagger-2">
+            <div class="social-platform">Twitter</div>
+            <div class="social-content">
+              <p class="social-text">"今天的测试非常顺利，赛车感觉很棒！迫不及待想要开始新赛季了 🏎️"</p>
+              <p class="social-text" style="margin-top: 12px; font-size: 13px; color: var(--text-dim);">感谢所有车迷的支持，2026 年我们一起冲刺总冠军！🏆 #F1 #McLaren #LN4</p>
+            </div>
+            <div class="social-meta">
+              <span>🔁 12K</span>
+              <span>❤️ 89K</span>
+            </div>
+          </article>
+          
+          <article class="social-card reveal-up stagger-3">
+            <div class="social-platform">Twitch</div>
+            <div class="social-content">
+              <div class="twitch-preview">
+                <div class="live-badge">● LIVE</div>
+                <p style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">周末游戏直播</p>
+                <p style="font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.6;">明天今晚 8 点准时开播！<br>和车迷一起玩游戏、聊 F1，还有问答环节等你来参与 🎮</p>
+              </div>
+            </div>
+            <div class="social-meta">
+              <span>👁️ 45K 观看中</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         版块 15: 生活方式画廊
+         展示游戏、高尔夫、时尚、旅行等
+         ======================================== -->
+    <section class="section section-lifestyle" data-section="15" aria-label="生活方式">
+      <div class="lifestyle-grid-v2">
+        <div class="lifestyle-bg-watermark" aria-hidden="true">LIFESTYLE</div>
+
+        <div class="lifestyle-item-v2 reveal-up">
+          <div class="lifestyle-image-v2">
+            <img src="./Photoshot/13.jpeg" alt="游戏生活">
+            <div class="item-overlay"><span>GAMING</span></div>
+          </div>
+        </div>
+
+        <div class="lifestyle-item-v2 reveal-up" style="margin-top: 60px;">
+          <div class="lifestyle-image-v2">
+            <img src="./Photoshot/14.jpeg" alt="高尔夫运动">
+            <div class="item-overlay"><span>GOLF</span></div>
+          </div>
+        </div>
+
+        <div class="lifestyle-item-v2 reveal-up">
+          <div class="lifestyle-image-v2">
+            <img src="./Photoshot/15.jpg" alt="时尚穿搭">
+            <div class="item-overlay"><span>FASHION</span></div>
+          </div>
+        </div>
+
+        <div class="lifestyle-item-v2 reveal-up" style="margin-top: 60px;">
+          <div class="lifestyle-image-v2">
+            <img src="./Photoshot/16.jpeg" alt="旅行生活">
+            <div class="item-overlay"><span>TRAVEL</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         版块 16: 头盔名人堂
+         展示不同设计的头盔
+         ======================================== -->
+    <section class="section section-helmets" data-section="16" aria-label="头盔名人堂">
+      <div class="helmets-content">
+        <div class="museum-bg-text" aria-hidden="true">PROTECTION</div>
+        <h2 class="helmet-title">
+          <span class="title-reveal">头盔</span>
+          <span class="title-reveal" style="color: var(--lime);">名人堂</span>
+        </h2>
+        
+        <div class="helmets-showcase">
+          <div class="helmet-item reveal-up stagger-1">
+            <div class="helmet-card">
+              <img src="./Photoshot/17.jpeg" alt="2024标准头盔">
+              <div class="helmet-label">2024 STANDARD</div>
+              <div class="pedestal-glow" aria-hidden="true"></div> </div>
+          </div>
+
+          <div class="helmet-item reveal-up stagger-2">
+            <div class="helmet-card">
+              <img src="./Photoshot/18.jpeg" alt="迈阿密特别版头盔">
+              <div class="helmet-label">MIAMI SPECIAL</div>
+              <div class="pedestal-glow" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <div class="helmet-item reveal-up stagger-3">
+            <div class="helmet-card">
+              <img src="./Photoshot/19.jpeg" alt="迪斯科球头盔">
+              <div class="helmet-label">DISCO BALL</div>
+              <div class="pedestal-glow" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         版块 17: 合作伙伴
+         展示品牌合作伙伴
+         ======================================== -->
+    <section class="section section-partners" data-section="17" id="partnerships" aria-label="合作伙伴">
+      <div class="partners-content">
+        <h2 class="partners-title">
+          <span class="title-reveal">合作伙伴</span>
+        </h2>
+        <div class="partners-grid reveal-up" role="list">
+          <div class="partner-item" role="listitem"><span>迈凯伦</span></div>
+          <div class="partner-item" role="listitem"><span>Bell & Ross</span></div>
+          <div class="partner-item" role="listitem"><span>Wearable</span></div>
+          <div class="partner-item" role="listitem"><span>Rhude</span></div>
+          <div class="partner-item" role="listitem"><span>Velo</span></div>
+          <div class="partner-item" role="listitem"><span>Tumi</span></div>
+          <div class="partner-item" role="listitem"><span>Optimum Nutrition</span></div>
+          <div class="partner-item" role="listitem"><span>Sparco</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         版块 18: LN商店
+         展示周边商品
+         ======================================== -->
+    <section class="section section-store" data-section="18" aria-label="LN商店">
+      <div class="store-content">
+        <h2 class="store-title">
+          <span class="title-reveal">LN</span>
+          <span class="title-reveal">商店</span>
+        </h2>
+        <div class="store-items">
+          <article class="store-item reveal-up stagger-1">
+            <div class="store-image">
+              <div class="photo-placeholder"><div style="display: flex; align-items: center; justify-content: center; padding: 20px; min-height: 200px;"><img src="./Photoshot/20.jpg" alt="基础T恤" style="max-width: 100%; max-height: 200px; object-fit: contain;" loading="lazy" decoding="async"></div><p>基础 T 恤</p></div>
+            </div>
+            <span class="store-name">基础宽松 T 恤</span>
+            <span class="store-price">£30 英镑</span>
+          </article>
+          <article class="store-item reveal-up stagger-2">
+            <div class="store-image">
+              <div class="photo-placeholder"><div style="display: flex; align-items: center; justify-content: center; padding: 20px; min-height: 200px;"><img src="./Photoshot/21.jpeg" alt="遮阳帽" style="max-width: 100%; max-height: 200px; object-fit: contain;" loading="lazy" decoding="async"></div><p>帽子</p></div>
+            </div>
+            <span class="store-name">遮阳帽子</span>
+            <span class="store-price">£28 英镑</span>
+          </article>
+          <article class="store-item reveal-up stagger-3">
+            <div class="store-image">
+              <div class="photo-placeholder"><div style="display: flex; align-items: center; justify-content: center; padding: 20px; min-height: 200px;"><img src="./Photoshot/22.png" alt="连帽衫" style="max-width: 100%; max-height: 200px; object-fit: contain;" loading="lazy" decoding="async"></div><p>连帽衫</p></div>
+            </div>
+            <span class="store-name">基础连帽衫</span>
+            <span class="store-price">£55 英镑</span>
+          </article>
+        </div>
+        <a href="#" class="store-cta magnetic-btn" aria-label="访问LN商店">
+          <span>访问商店</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ========================================
+         版块 19: 2025赛季日程
+         展示即将进行的比赛
+         ======================================== -->
+    <section class="section section-calendar" data-section="19" id="calendar" aria-label="2025赛季日程">
+      <div class="calendar-content">
+        <div class="calendar-bg-map" aria-hidden="true">WORLD TOUR</div>
+        <h2 class="calendar-title">
+          <span class="title-reveal">2025</span>
+          <span class="title-reveal" style="color: var(--lime);">赛季日程</span>
+        </h2>
+        
+        <div class="race-cards-container reveal-up" role="list">
+          <article class="race-card-item active" role="listitem">
+            <div class="race-card-header">
+              <div class="race-status">NEXT RACE</div>
+              <div class="race-info-wrap">
+                <span class="race-round">R01</span>
+                <h3 class="race-location">MELBOURNE</h3>
+                <p class="race-date">MAR 14 - 16</p>
+              </div>
+              <div class="race-card-footer">AUSTRALIA GP</div>
+            </div>
+            <div class="race-details">
+              <div class="race-details-inner">
+                <div class="race-weather">🌤️ 22°C 晴朗 / 赛道长度: 5.278km</div>
+                <p style="font-size: 13px; color: var(--text-dim); margin: 10px 0;">上赛季战绩: P3 (Podium)</p>
+                <button class="magnetic-btn race-action-btn" style="padding: 8px 16px; font-size: 12px; border-color: var(--lime); color: var(--lime);" aria-label="添加澳大利亚大奖赛到日历">
+                  + 添加到日历
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="race-card-item" role="listitem">
+            <div class="race-card-header">
+              <div class="race-status">UPCOMING</div>
+              <div class="race-info-wrap">
+                <span class="race-round">R02</span>
+                <h3 class="race-location">SHANGHAI</h3>
+                <p class="race-date">MAR 21 - 23</p>
+              </div>
+              <div class="race-card-footer">CHINESE GP</div>
+            </div>
+            <div class="race-details">
+              <div class="race-details-inner">
+                <div class="race-weather">🌤️ 18°C 多云 / 赛道长度: 5.451km</div>
+                <p style="font-size: 13px; color: var(--text-dim); margin: 10px 0;">上赛季战绩: P5</p>
+                <button class="magnetic-btn race-action-btn" style="padding: 8px 16px; font-size: 12px; border-color: var(--lime); color: var(--lime);" aria-label="添加中国大奖赛到日历">
+                  + 添加到日历
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="race-card-item" role="listitem">
+            <div class="race-card-header">
+              <div class="race-status">UPCOMING</div>
+              <div class="race-info-wrap">
+                <span class="race-round">R03</span>
+                <h3 class="race-location">SUZUKA</h3>
+                <p class="race-date">APR 04 - 06</p>
+              </div>
+              <div class="race-card-footer">JAPANESE GP</div>
+            </div>
+            <div class="race-details">
+              <div class="race-details-inner">
+                <div class="race-weather">🌧️ 16°C 多雨 / 赛道长度: 5.807km</div>
+                <p style="font-size: 13px; color: var(--text-dim); margin: 10px 0;">上赛季战绩: P2 (Podium)</p>
+                <button class="magnetic-btn race-action-btn" style="padding: 8px 16px; font-size: 12px; border-color: var(--lime); color: var(--lime);" aria-label="添加日本大奖赛到日历">
+                  + 添加到日历
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         版块 19.5: 赛道复盘
+         展示经典赛道的 SVG 地图和比赛回顾
+         ======================================== -->
+    <section class="section section-trackmap" data-section="trackmap" id="trackmap">
+      <div style="width: 90vw; max-width: 1100px; margin: 0 auto;">
+        <h2 style="font-family: var(--font-display); font-size: clamp(36px, 5vw, 64px); text-transform: uppercase; margin-bottom: 60px; text-align: center;">
+          <span class="title-reveal">赛道</span>
+          <span class="title-reveal" style="color: var(--lime);">复盘</span>
+        </h2>
+
+        <div class="trackmap-container" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: center;">
+          
+          <div class="track-info" id="trackInfoPanel" style="background: rgba(255,255,255,0.02); padding: 40px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+            </div>
+
+          <div class="track-visual" style="position: relative; width: 100%; height: 400px; display: flex; align-items: center; justify-content: center;">
+            <svg id="trackSvg" viewBox="0 0 800 600" style="width: 100%; height: 100%; filter: drop-shadow(0 0 20px rgba(0, 255, 135, 0.4));">
+              <path class="track-svg-path" d="" fill="none" stroke="var(--lime)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="track-selector" style="display: flex; justify-content: center; gap: 20px; margin-top: 40px; flex-wrap: wrap;">
+          <button class="track-dot active" data-track="silverstone" aria-label="银石赛道"></button>
+          <button class="track-dot" data-track="monaco" aria-label="摩纳哥赛道"></button>
+          <button class="track-dot" data-track="austria" aria-label="红牛环赛道"></button>
+          <button class="track-dot" data-track="singapore" aria-label="滨海湾赛道"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         版块 20: 游戏中心
+         包含反应测试、F1 问答、成就徽章和排行榜
+         ======================================== -->
+    <section class="section section-games" data-section="20" id="games" aria-label="游戏中心">
+      <div class="games-container">
+        
+        <div class="games-header reveal-up">
+          <h2 class="games-title">
+            <span class="title-reveal">LN4</span>
+            <span class="title-reveal" style="color: var(--lime);">游戏中心</span>
+          </h2>
+          <p class="games-subtitle">测试你的反应速度和F1知识</p>
+        </div>
+        
+        <div class="games-tabs reveal-up" role="tablist" aria-label="游戏类型选择">
+          <button class="game-tab active" data-tab="reaction" role="tab" aria-selected="true" aria-controls="panel-reaction">反应测试</button>
+          <button class="game-tab" data-tab="quiz" role="tab" aria-selected="false" aria-controls="panel-quiz">F1 问答</button>
+          <button class="game-tab" data-tab="achievements" role="tab" aria-selected="false" aria-controls="panel-achievements">成就徽章</button>
+          <button class="game-tab" data-tab="leaderboard" role="tab" aria-selected="false" aria-controls="panel-leaderboard">排行榜</button>
+          <button class="game-tab" data-tab="prediction" role="tab" aria-selected="false" aria-controls="panel-prediction">比赛预测</button>
+        </div>
+        
+        <!-- 反应测试面板 -->
+        <div class="game-panel active" id="panel-reaction" role="tabpanel" aria-label="反应测试游戏">
+          <div class="reaction-game">
+            
+            <!-- F1发车灯 -->
+            <div class="reaction-lights" aria-hidden="true">
+              <div class="reaction-light"></div>
+              <div class="reaction-light"></div>
+              <div class="reaction-light"></div>
+              <div class="reaction-light"></div>
+              <div class="reaction-light"></div>
+            </div>
+            
+            <button class="reaction-area waiting" id="reactionArea" aria-label="反应测试区域">
+              <div class="reaction-text" id="reactionText">
+                点击开始测试<br>
+                <span style="font-size: 14px; color: var(--text-dim);">模拟F1发车灯</span>
+              </div>
+            </button>
+            
+            <div class="reaction-stats" aria-live="polite">
+              <div class="reaction-stat">
+                <div class="reaction-stat-value" id="reactionBest">--ms</div>
+                <div class="reaction-stat-label">最佳成绩</div>
+              </div>
+              <div class="reaction-stat">
+                <div class="reaction-stat-value" id="reactionAvg">--ms</div>
+                <div class="reaction-stat-label">平均成绩</div>
+              </div>
+              <div class="reaction-stat">
+                <div class="reaction-stat-value" id="reactionAttempts">0</div>
+                <div class="reaction-stat-label">尝试次数</div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+        <!-- F1问答面板 -->
+        <div class="game-panel" id="panel-quiz" role="tabpanel" aria-label="F1知识问答">
+          <div class="quiz-game" id="quizContainer">
+            
+            <div id="quizStartCard" style="text-align: center; padding: 60px 40px;">
+              <div style="font-size: 48px; margin-bottom: 20px;" aria-hidden="true">🏎️</div>
+              <h3 style="font-family: var(--font-display); font-size: 28px; margin-bottom: 16px;">F1知识挑战</h3>
+              <p style="color: var(--text-dim); margin-bottom: 30px;">5道题目，测试你对F1和Lando Norris的了解</p>
+              <button class="magnetic-btn" id="quizStartBtn" style="padding: 16px 40px; background: var(--lime); color: var(--bg); border: none; border-radius: 8px; font-family: var(--font-display); font-weight: 700; letter-spacing: 2px; cursor: pointer;">
+                开始挑战
+              </button>
+            </div>
+            
+            <div class="quiz-progress" id="quizProgress" aria-live="polite"></div>
+            
+            <div class="quiz-question-card" id="quizQuestionCard" style="display: none;" aria-live="polite"></div>
+            
+            <div class="quiz-score-card" id="quizScoreCard" style="display: none;">
+              <div class="quiz-score-value">0</div>
+              <div class="quiz-score-label">最终得分</div>
+              <div class="quiz-score-message"></div>
+              <button id="quizRestartBtn" style="margin-top: 30px; padding: 12px 30px; background: transparent; border: 1px solid var(--lime); color: var(--lime); border-radius: 8px; font-family: var(--font-display); cursor: pointer;">
+                再来一次
+              </button>
+            </div>
+            
+          </div>
+        </div>
+        
+        <!-- 成就徽章面板 -->
+        <div class="game-panel" id="panel-achievements" role="tabpanel" aria-label="成就徽章">
+          <div class="achievements-grid" id="achievementsGrid" aria-live="polite">
+            </div>
+          
+          <div style="text-align: center; margin-top: 40px;">
+            <div style="font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-dim);">总积分</div>
+            <div style="font-family: var(--font-display); font-size: 48px; font-weight: 800; color: var(--lime);" id="totalPoints" aria-live="polite">0</div>
+          </div>
+        </div>
+        
+        <!-- 排行榜面板 -->
+        <div class="game-panel" id="panel-leaderboard" role="tabpanel" aria-label="排行榜">
+          <div class="leaderboard-container">
+            
+            <div class="leaderboard-tabs" role="tablist" aria-label="排行榜类型">
+              <button class="leaderboard-tab active" data-type="reaction" role="tab" aria-selected="true">反应速度</button>
+              <button class="leaderboard-tab" data-type="quiz" role="tab" aria-selected="false">问答得分</button>
+            </div>
+            
+            <div class="leaderboard-list" id="leaderboardList" role="list" aria-live="polite">
+              </div>
+            
+          </div>
+        </div>
+        
+        <!-- 比赛预测面板 -->
+        <div class="game-panel" id="panel-prediction" role="tabpanel" aria-label="比赛预测">
+          <div class="prediction-game" style="max-width: 800px; margin: 0 auto; background: rgba(255,255,255,0.02); padding: 40px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+            
+            <div style="display: flex; justify-content: space-between; margin-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px;">
+              <div>预测总数：<strong id="predictionCount" style="color: var(--lime);">0</strong></div>
+              <div>准确率：<strong id="predictionAccuracy" style="color: var(--lime);">--</strong></div>
+            </div>
+        
+            <div class="prediction-section" style="margin-bottom: 30px;">
+              <h4 style="margin-bottom: 16px; color: var(--text-dim); font-size: 14px; letter-spacing: 2px;">谁将获得下一场杆位？</h4>
+              <div class="prediction-options" id="poleOptions" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <button class="prediction-option game-tab" data-driver="norris">Lando Norris</button>
+                <button class="prediction-option game-tab" data-driver="verstappen">Max Verstappen</button>
+                <button class="prediction-option game-tab" data-driver="leclerc">Charles Leclerc</button>
+              </div>
+            </div>
+        
+            <div class="prediction-section" style="margin-bottom: 30px;">
+              <h4 style="margin-bottom: 16px; color: var(--text-dim); font-size: 14px; letter-spacing: 2px;">谁将获得正赛冠军？</h4>
+              <div class="prediction-options" id="winnerOptions" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <button class="prediction-option game-tab" data-driver="norris">Lando Norris</button>
+                <button class="prediction-option game-tab" data-driver="verstappen">Max Verstappen</button>
+                <button class="prediction-option game-tab" data-driver="leclerc">Charles Leclerc</button>
+              </div>
+            </div>
+        
+            <div class="prediction-section" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 40px;">
+              <div>
+                <h4 style="margin-bottom: 16px; color: var(--text-dim); font-size: 14px;">Lando 最终名次</h4>
+                <div class="prediction-options" id="posOptions" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                  <button class="prediction-option game-tab" data-pos="P1">P1</button>
+                  <button class="prediction-option game-tab" data-pos="Podium">领奖台</button>
+                  <button class="prediction-option game-tab" data-pos="Points">积分区</button>
+                </div>
+              </div>
+              <div>
+                <h4 style="margin-bottom: 16px; color: var(--text-dim); font-size: 14px;">安全车出动次数</h4>
+                <div class="prediction-options" id="scOptions" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                  <button class="prediction-option game-tab" data-sc="0">0 次</button>
+                  <button class="prediction-option game-tab" data-sc="1-2">1-2 次</button>
+                  <button class="prediction-option game-tab" data-sc="3+">3 次以上</button>
+                </div>
+              </div>
+            </div>
+        
+            <div id="predictionSummary" style="display: none; background: rgba(0,255,135,0.05); padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 3px solid var(--lime);">
+              <div class="prediction-summary-content" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; font-size: 14px;"></div>
+            </div>
+        
+            <button id="submitPrediction" class="magnetic-btn" style="width: 100%; justify-content: center; opacity: 0.5; pointer-events: none;">提交预测</button>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- ========================================
+         版块 22: F1 视频
+         展示精选 F1 视频
+         ======================================== -->
+    <section class="section section-videos" data-section="22" id="videos" aria-label="F1 视频">
+      <div class="videos-wrapper">
+        <div class="videos-header reveal-up">
+          <h2 class="videos-title">
+            <span class="title-reveal">F1</span>
+            <span class="title-reveal" style="color: var(--lime);">视频</span>
+          </h2>
+        </div>
+
+        <div class="videos-grid">
+          <!-- 视频 1 -->
+          <div class="video-card reveal-up stagger-1" id="videoCard1">
+            <div class="video-player">
+              <video id="video1" preload="metadata" playsinline aria-label="F1 视频 1">
+                <source src="./Photoshot/1.mp4" type="video/mp4">
+              </video>
+              <div class="video-duration" id="duration1">--:--</div>
+              <div class="video-overlay" id="overlay1">
+                <button class="video-play-btn" id="playBtn1" aria-label="播放视频 1">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="video-info">
+              <h3 class="video-title">极速时刻 Vol.1</h3>
+              <p class="video-desc">赛道上最惊心动魄的超车瞬间，感受一级方程式的极致速度。</p>
+            </div>
+          </div>
+
+          <!-- 视频 2 -->
+          <div class="video-card reveal-up stagger-2" id="videoCard2">
+            <div class="video-player">
+              <video id="video2" preload="metadata" playsinline aria-label="F1 视频 2">
+                <source src="./Photoshot/2.mp4" type="video/mp4">
+              </video>
+              <div class="video-duration" id="duration2">--:--</div>
+              <div class="video-overlay" id="overlay2">
+                <button class="video-play-btn" id="playBtn2" aria-label="播放视频 2">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="video-info">
+              <h3 class="video-title">极速时刻 Vol.2</h3>
+              <p class="video-desc">从发车到冲线，回顾赛季中最精彩的比赛回放与精妙策略。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         版块 21: 粉丝留言
+         车迷可以留言支持 Lando
+         ======================================== -->
+    <section class="section section-messages" data-section="21" id="fan-messages" aria-labelledby="messages-title">
+      <div class="messages-wrapper">
+        
+        <div class="reveal-left">
+          <h2 class="split-title" style="margin-bottom: 20px;" id="messages-title">
+            <span class="title-reveal">车迷</span>
+            <span class="title-reveal" style="color: var(--lime);">声音</span>
+          </h2>
+          <p class="split-desc" style="margin-bottom: 40px;">留下你对 Lando Norris 和迈凯伦车队的寄语与支持。</p>
+          
+          <!-- 留言表单 -->
+          <div class="message-form-card">
+            <form id="fanMessageForm" aria-label="粉丝留言表单">
+              <label for="msgName" class="visually-hidden">你的昵称</label>
+              <input type="text" id="msgName" class="msg-input" placeholder="你的昵称" required maxlength="20" aria-required="true">
+              <label for="msgText" class="visually-hidden">留言内容</label>
+              <textarea id="msgText" class="msg-textarea" rows="4" placeholder="写下你的留言..." required maxlength="200" aria-required="true"></textarea>
+              <button type="submit" class="magnetic-btn msg-submit-btn" style="width: 100%; justify-content: center;">
+                <span>发送留言</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- 留言列表 -->
+        <div class="reveal-right">
+          <div class="messages-list" id="fanMessagesList" role="feed" aria-label="粉丝留言列表" aria-live="polite"> 
+   
+   <article class="message-item"> 
+     <div class="msg-header"> 
+       <span class="msg-author">PapayaRules</span> 
+       <time class="msg-date" datetime="2026-02-21">2026/02/21</time> 
+     </div> 
+     <div class="msg-body">Lando和Oscar绝对是围场里最强的车手阵容！今年迈凯伦继续冲啊，捍卫车队总冠军！🧡🏎️</div> 
+   </article> 
+
+   <article class="message-item"> 
+     <div class="msg-header"> 
+       <span class="msg-author">LN4_Forever</span> 
+       <time class="msg-date" datetime="2026-02-18">2026/02/18</time> 
+     </div> 
+     <div class="msg-body">昨晚Twitch的直播太搞笑了，什么时候再开个高尔夫直播？⛳️ 另外新头盔的设计真的绝了！</div> 
+   </article> 
+
+   <article class="message-item"> 
+     <div class="msg-header"> 
+       <span class="msg-author">RacingNerd</span> 
+       <time class="msg-date" datetime="2026-02-12">2026/02/12</time> 
+     </div> 
+     <div class="msg-body">不得不说，这两年Lando的保胎能力和比赛阅读能力提升了太多，完全具备了夺冠的硬实力。</div> 
+   </article> 
+
+   <article class="message-item"> 
+     <div class="msg-header"> 
+       <span class="msg-author">QuadrantFan</span> 
+       <time class="msg-date" datetime="2026-02-05">2026/02/05</time> 
+     </div> 
+     <div class="msg-body">Quadrant刚出的那套衣服我已经下单了！赛道外也能把电竞和潮流结合得这么好的车手只有你了 🔥🔥</div> 
+   </article> 
+
+   <article class="message-item"> 
+     <div class="msg-header"> 
+       <span class="msg-author">SilverstoneLocal</span> 
+       <time class="msg-date" datetime="2026-01-28">2026/01/28</time> 
+     </div> 
+     <div class="msg-body">等不及今年的英国站了！我们已经在主看台买好票了，到时候全场都会为你欢呼的！🇬🇧🏆</div> 
+   </article> 
+
+   <article class="message-item"> 
+     <div class="msg-header"> 
+       <span class="msg-author">AussieMcLaren</span> 
+       <time class="msg-date" datetime="2026-01-15">2026/01/15</time> 
+     </div> 
+     <div class="msg-body">墨尔本揭幕战见！希望能看到两台木瓜色赛车一二带回！Let's go Lando!</div> 
+   </article> 
+
+   <article class="message-item"> 
+     <div class="msg-header"> 
+       <span class="msg-author">SpeedKing88</span> 
+       <time class="msg-date" datetime="2026-01-08">2026/01/08</time> 
+     </div> 
+     <div class="msg-body">Lando 的无线电通讯总是那么有趣，特别是和工程师的互动，能感受到整个团队的氛围都很好！🎧</div> 
+   </article> 
+
+   <article class="message-item"> 
+     <div class="msg-header"> 
+       <span class="msg-author">McLarenGirl</span> 
+       <time class="msg-date" datetime="2025-12-25">2025/12/25</time> 
+     </div> 
+     <div class="msg-body">圣诞快乐 Lando！感谢你这一年带来的精彩表现，2025 年一定会是你的年份！🎄🧡</div> 
+   </article> 
+
+   <article class="message-item"> 
+     <div class="msg-header"> 
+       <span class="msg-author">F1Statistics</span> 
+       <time class="msg-date" datetime="2025-12-18">2025/12/18</time> 
+     </div> 
+     <div class="msg-body">数据不会说谎：Lando 在过去 10 场比赛中的平均排位赛成绩是 2.3 位，正赛平均完赛位置 2.8 位，绝对是顶级表现！📊</div> 
+   </article> 
+
+   <article class="message-item"> 
+     <div class="msg-header"> 
+       <span class="msg-author">NewbieFan</span> 
+       <time class="msg-date" datetime="2025-12-10">2025/12/10</time> 
+     </div> 
+     <div class="msg-body">我是因为 Lando 才开始看 F1 的，现在已经是迈凯伦铁粉了！他的驾驶风格和个性都太吸引人了 😄</div> 
+   </article> 
+
+   <article class="message-item"> 
+     <div class="msg-header"> 
+       <span class="msg-author">SimRacer_Pro</span> 
+       <time class="msg-date" datetime="2025-12-01">2025/12/01</time> 
+     </div> 
+     <div class="msg-body">在模拟赛车游戏里用过 Lando 的设置，转向过度真的很难控制...职业车手的实力不是盖的！🎮</div> 
+   </article> 
+
+   <article class="message-item"> 
+     <div class="msg-header"> 
+       <span class="msg-author">BritishPride</span> 
+       <time class="msg-date" datetime="2025-11-22">2025/11/22</time> 
+     </div> 
+     <div class="msg-body">作为英国车迷，看到 Lando 在银石的表现真的超级自豪！他是我们国家的骄傲！🇬🇧🏁</div> 
+   </article> 
+
+   <article class="message-item"> 
+     <div class="msg-header"> 
+       <span class="msg-author">PapayaArmy</span> 
+       <time class="msg-date" datetime="2025-11-15">2025/11/15</time> 
+     </div> 
+     <div class="msg-body">迈凯伦这几年真的回来了！从 2022 年的低谷到现在的争冠车队，Lando 功不可没！🧡💪</div> 
+   </article> 
+
+   <article class="message-item"> 
+     <div class="msg-header"> 
+       <span class="msg-author">F1_Addict</span> 
+       <time class="msg-date" datetime="2026-01-02">2026/01/02</time> 
+     </div> 
+     <div class="msg-body">休赛期没有比赛看真的太难熬了，翻来覆去在看去年迈阿密和荷兰站的回放，每次看都热血沸腾！</div> 
+   </article> 
+
+   <article class="message-item"> 
+     <div class="msg-header"> 
+       <span class="msg-author">SpeedDemon</span> 
+       <time class="msg-date" datetime="2025-12-20">2025/12/20</time> 
+     </div> 
+     <div class="msg-body">一直支持LN4！你的驾驶风格太有魅力了，从F2时期就开始关注你，永远是四号车迷！🧡</div> 
+   </article> 
+
+   <article class="message-item"> 
+     <div class="msg-header"> 
+       <span class="msg-author">McLarenFan_4</span> 
+       <time class="msg-date" datetime="2025-12-10">2025/12/10</time> 
+     </div> 
+     <div class="msg-body">期待2026年新规下的赛车！相信迈凯伦的研发团队，加上Lando的速度，新赛季一定会有巨大的惊喜。</div> 
+   </article> 
+
+   <article class="message-item"> 
+     <div class="msg-header"> 
+       <span class="msg-author">MonzaMagic</span> 
+       <time class="msg-date" datetime="2025-11-25">2025/11/25</time> 
+     </div> 
+     <div class="msg-body">排位赛单圈的神！每一次看你排位赛最后一节的冲刺都是一种享受，走线太精准了。</div> 
+   </article> 
+
+ </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================
+         版块 22: 积分榜
+         展示车手和车队积分榜
+         ======================================== -->
+    <section class="section section-standings" data-section="standings" id="standings">
+      <div class="standings-container" style="width: 90vw; max-width: 1200px; margin: 0 auto;">
+        <h2 class="section-title" style="font-family: var(--font-display); font-size: clamp(36px, 5vw, 64px); text-transform: uppercase; margin-bottom: 40px; text-align: center;">
+          <span class="title-reveal">2024</span>
+          <span class="title-reveal" style="color: var(--lime);">积分榜</span>
+        </h2>
+        <div class="standings-tabs" style="display: flex; justify-content: center; gap: 20px; margin-bottom: 30px;">
+          <button class="standings-tab active magnetic-btn" data-type="drivers" style="background: transparent; border: 1px solid var(--lime); color: var(--lime); padding: 10px 24px; border-radius: 50px;">车手积分</button>
+          <button class="standings-tab magnetic-btn" data-type="constructors" style="background: transparent; border: 1px solid rgba(255,255,255,0.2); color: var(--text); padding: 10px 24px; border-radius: 50px;">车队积分</button>
+        </div>
+        <div class="standings-panel active" id="driversStandings">
+          <div class="standings-table" style="display: flex; flex-direction: column; gap: 10px;"></div>
+        </div>
+        <div class="standings-panel" id="constructorsStandings" style="display: none;">
+          <div class="constructors-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         版块 23: 赛季走势
+         展示赛季数据趋势图表
+         ======================================== -->
+    <section class="section section-trend" data-section="trend" id="trend">
+      <div style="width: 90vw; max-width: 1000px; margin: 0 auto;">
+        <h2 style="font-family: var(--font-display); font-size: clamp(36px, 5vw, 64px); text-transform: uppercase; margin-bottom: 40px; text-align: center;">赛季<span style="color: var(--lime);">走势</span></h2>
+        <div style="position: relative; width: 100%; height: 400px; background: rgba(255,255,255,0.02); border-radius: 12px; padding: 20px;">
+          <canvas id="trendCanvas" style="width: 100%; height: 100%;"></canvas>
+        </div>
+        <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px; font-size: 14px;">
+          <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 12px; height: 12px; border-radius: 50%; background: #00ff87;"></span> 完赛位置</span>
+          <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 12px; height: 12px; border-radius: 50%; background: #ff6b00;"></span> 起跑位置</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         版块 24: 车迷投票
+         互动投票功能
+         ======================================== -->
+    <section class="section section-poll" data-section="24" id="poll" aria-label="车迷投票">
+      <div class="poll-container">
+        <h2 class="poll-title">
+          <span class="title-reveal">车迷</span>
+          <span class="title-reveal" style="color: var(--lime);">投票</span>
+        </h2>
+        
+        <div class="poll-card" role="group" aria-labelledby="poll-question">
+          <h3 class="poll-question" id="poll-question">你认为 Lando 在 2025 赛季能获得几场胜利？</h3>
+          
+          <div class="poll-options" role="radiogroup" aria-label="投票选项">
+            <button class="poll-option" data-votes="15" role="radio" aria-checked="false">
+              <div class="poll-option-text">1-3 场</div>
+              <div class="poll-bar">
+                <div class="poll-bar-fill" style="width: 0%"></div>
+              </div>
+              <div class="poll-percentage">0%</div>
+            </button>
+            
+            <button class="poll-option" data-votes="45" role="radio" aria-checked="false">
+              <div class="poll-option-text">4-6 场</div>
+              <div class="poll-bar">
+                <div class="poll-bar-fill" style="width: 0%"></div>
+              </div>
+              <div class="poll-percentage">0%</div>
+            </button>
+            
+            <button class="poll-option" data-votes="30" role="radio" aria-checked="false">
+              <div class="poll-option-text">7-9 场</div>
+              <div class="poll-bar">
+                <div class="poll-bar-fill" style="width: 0%"></div>
+              </div>
+              <div class="poll-percentage">0%</div>
+            </button>
+            
+            <button class="poll-option" data-votes="10" role="radio" aria-checked="false">
+              <div class="poll-option-text">10+ 场</div>
+              <div class="poll-bar">
+                <div class="poll-bar-fill" style="width: 0%"></div>
+              </div>
+              <div class="poll-percentage">0%</div>
+            </button>
+          </div>
+          
+          <div class="poll-footer">
+            <span class="poll-total">总投票数：<strong id="pollTotalCount">0</strong></span>
+            <button id="resetPollBtn" style="margin-top: 12px; padding: 8px 16px; background: transparent; border: 1px solid var(--lime); color: var(--lime); border-radius: 4px; font-size: 12px; cursor: pointer; font-family: var(--font-display); transition: all 0.3s;" aria-label="重置投票结果">
+              重置投票
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+  </main>
+
+  <!-- ========================================
+       页脚
+       包含社交媒体链接和分享功能
+       ======================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-socials">
+        <a href="#" aria-label="TikTok">TikTok</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="YouTube">YouTube</a>
+        <a href="#" aria-label="Twitch">Twitch</a>
+      </div>
+      <div class="footer-share">
+        <span class="share-label">分享此页：</span>
+        <button class="share-btn" data-type="twitter" aria-label="分享到Twitter">X (Twitter)</button>
+        <button class="share-btn" data-type="facebook" aria-label="分享到Facebook">Facebook</button>
+        <button class="share-btn" data-type="copy" aria-label="复制链接">复制链接</button>
+      </div>
+    </div>
+    <div class="footer-line"></div>
+    <p><small>&copy; 2025 Lando Norris. All rights reserved.</small></p>
+  </footer>
+
+  <!-- JavaScript文件 - 延迟加载 -->
+  <script src="complete_merged.js" defer></script>
+
+  <!-- ========================================
+       全屏灯箱组件
+       用于图片全屏查看
+       ======================================== -->
+  <div class="fullscreen-lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="图片查看器" aria-hidden="true">
+    <div class="lightbox-header">
+      <span class="lightbox-counter" id="lightboxCounter" aria-live="polite">1 / 10</span>
+      <button class="lightbox-close" id="lightboxClose" aria-label="关闭图片查看器">×</button>
+    </div>
+    <button class="lightbox-nav prev" id="lightboxPrev" aria-label="上一张图片">‹</button>
+    <img src="" alt="全屏图片" id="lightboxImg">
+    <button class="lightbox-nav next" id="lightboxNext" aria-label="下一张图片">›</button>
+    <div class="lightbox-caption" id="lightboxCaption" aria-live="polite"></div>
+  </div>
+
+  <!-- ========================================
+       键盘快捷键帮助面板
+       显示可用的键盘导航快捷键
+       ======================================== -->
+  <div class="keyboard-help-modal" id="keyboardHelp" role="dialog" aria-modal="true" aria-labelledby="keyboard-help-title" aria-hidden="true">
+    <div class="help-content">
+      <h3 id="keyboard-help-title">键盘快捷键</h3>
+      <ul role="list">
+        <li><kbd aria-label="下箭头">↓</kbd> / <kbd>J</kbd> <span>下一个版块</span></li>
+        <li><kbd aria-label="上箭头">↑</kbd> / <kbd>K</kbd> <span>上一个版块</span></li>
+        <li><kbd>Home</kbd> / <kbd>End</kbd> <span>顶部 / 底部</span></li>
+        <li><kbd>F</kbd> <span>切换全屏</span></li>
+        <li><kbd>?</kbd> <span>显示/隐藏此面板</span></li>
+        <li><kbd>Esc</kbd> <span>关闭弹窗/画廊</span></li>
+      </ul>
+      <button class="close-help" id="closeHelp" aria-label="关闭帮助面板">关闭 (Esc)</button>
+    </div>
+  </div>
+
+  <!-- 跳转到主内容链接（可访问性） -->
+  <a href="#main" class="skip-to-content">跳转到主内容</a>
+
+  <!-- ========================================
+       移动端底部导航栏
+       固定在底部的快捷导航
+       ======================================== -->
+  <nav class="mobile-bottom-nav" id="mobileBottomNav" role="navigation" aria-label="移动端主导航">
+    <a href="#home" class="bottom-nav-item active" role="tab" aria-selected="true" aria-label="首页">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+      </svg>
+      <span>首页</span>
+    </a>
+    <a href="#on-track" class="bottom-nav-item" role="tab" aria-selected="false" aria-label="赛道">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+      </svg>
+      <span>赛道</span>
+    </a>
+    <a href="#calendar" class="bottom-nav-item" role="tab" aria-selected="false" aria-label="日历">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+      </svg>
+      <span>日历</span>
+    </a>
+    <a href="#games" class="bottom-nav-item" role="tab" aria-selected="false" aria-label="游戏">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/>
+      </svg>
+      <span>游戏</span>
+    </a>
+  </nav>
+
+  <!-- ========================================
+       F1 Team Radio 彩蛋
+       悬浮播放器，点击播放 Lando 经典语音
+       ======================================== -->
+  <button class="team-radio-btn" id="teamRadioBtn" aria-label="播放 Team Radio">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+      <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+      <line x1="12" y1="19" x2="12" y2="22"/>
+    </svg>
+    <div class="radio-waves">
+      <span></span><span></span><span></span>
+    </div>
+  </button>
+  <audio id="radioAudio" src="https://www.myinstants.com/media/sounds/lando-norris-friday-then.mp3" preload="none"></audio>
+
+</body>
+</html>
